@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../css/backtotop.css">
   <link rel="stylesheet" href="../css/footer.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>   
 </head>
 <body>
   
@@ -31,20 +32,30 @@
     <a href="decouvrir.php">L'équipe</a>
     <a href="quiz.php">Quizz</a>
     <a id="boutonLangues">
-      <img class="flag" src="../img/fr.png"><ion-icon name="arrow-dropdown"></ion-icon>
+      <i class='fa fa-flag'></i><ion-icon name="arrow-dropdown"></ion-icon>
     </a>
   </div>
   <div id="listeLangues" class="cacherListeLangues">
         <div class="langue">
-      <a href="../en/index.php">
+      <a href="../htdocs/index.php">
+        <img class="flag" src="../img/fr.png">
+      </a>
+    </div>
+        <div class="langue">
+      <a href="../htdocs/en/index.php">
         <img class="flag" src="../img/en.png">
       </a>
     </div>
         <div class="langue">
-      <a href="../es/index.php">
-        <img class="flag" src="../img/es.png">
+      <a href="../htdocs/ar/index.php">
+        <img class="flag" src="../img/ar.png">
       </a>
     </div>
+        <div class="langue">
+      <a href="../htdocs/cn/index.php">
+        <img class="flag" src="../img/cn.png">
+      </a>
+        </div>
       </div>
 
   <!-- Bouton version mobile -->
@@ -62,12 +73,12 @@
         <ul class="listposition">
           <li class="connexionlist"><a href="connexion.php">Connexion</a></li>
           <li class="inscriptionlist"><a href="inscription.php">Inscription</a></li>
+          <li class="faqList"><a href="faq.php">FAQ</a></li>
+          <li class="contactList"><a href="index.php#contact">Contact</a></li>
+          <li class="decouvrirList"><a href="decouvrir.php">L'équipe</a></li>
+          <li class="quizzList"><a href="quiz.php">Quizz</a></li>
         </ul>
       </div>
-      <a href="faq.php">FAQ</a>
-      <a href="index.php#contact">Contact</a>
-      <a href="decouvrir.php">L'équipe</a>
-      <a href="quiz.php">Quizz</a>
       <div id="listeLanguesMobile">
                   <a href="../en/index.php">
             <img class="flag" src="../img/en.png">
