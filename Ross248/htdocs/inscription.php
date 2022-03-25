@@ -19,6 +19,40 @@
 
 <!-- Nav -->
 <?php include('nav.php')?>
+<div class="videNav"></div>
+
+    <div id="milieu">
+      <div class="txtMilieu">
+        <h1>Bienvenue</h1>
+        <ion-icon name="contact"></ion-icon>
+      </div>
+      <div class="message">
+                      </div>
+    <form action="connexion-controleurs.php" method="post">
+      <div class="formulaire">
+        <ion-icon name="person"></ion-icon>
+        <input type="text" name="mail" placeholder="adresse mail"><br>
+        </div>
+      <div class="formulaire">
+        <ion-icon name="person"></ion-icon>
+        <input type="password" name="nom" placeholder="nom"/><br />
+      </div>
+      <div class="formulaire">
+        <ion-icon name="person"></ion-icon>
+        <input type="password" name="prenom" placeholder="prenom"/><br />
+      </div>
+      <div class="formulaire">
+        <ion-icon name="lock"></ion-icon>
+        <input type="password" name="mdp" placeholder="mot de passe"/><br />
+      </div>
+      <div class="envoyer">
+        <input type="submit" name="inscription" value="Inscription" />
+      </div>
+      <div class="connexion-ins">
+        <a href="connexion.php">connexion</a>
+      </div>
+    </form>
+  </div>
 
 <!-- Footer -->
 <?php include('footer.php') ?>

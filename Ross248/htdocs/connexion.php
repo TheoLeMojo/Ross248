@@ -28,8 +28,26 @@
       </div>
       <div class="message">
                       </div>
-      <form action="../../controleurs/connexion.php" method="post">
-        <div class="formulaire">
+    <form action="connexion-controleurs.php" method="post">
+      <div class="formulaire">
+        <ion-icon name="person"></ion-icon>
+        <input type="text" name="mail" placeholder="adresse mail"><br>
+        </div>
+      <div class="formulaire">
+        <ion-icon name="lock"></ion-icon>
+        <input type="password" name="mdp" placeholder="mot de passe"/><br />
+      </div>
+      <div class="envoyer">
+        <input type="submit" name="connexion" value="Connexion" />
+      </div>
+      <div class="inscription-co">
+        <a href="inscription.php">inscription</a>
+      </div>
+    </form>
+  </div>
+<!--
+   <form action="../../controleurs/connexion.php" method="post">
+    <div class="formulaire">
           <ion-icon name="person"></ion-icon>
           <input type="text" name="mail" placeholder="Adresse mail"><br>
         </div>
@@ -39,16 +57,10 @@
         </div>
         <div class="envoyer">
           <input type="submit" name="env" value="Se connecter">
-          <?php
-          $mysqlConnection = new PDO(
-          'mysql:host=localhost;dbname=infinite-measures_by_Ross248;charset=utf8',
-          'root',
-          'root'
-          );
-          ?>
         </div>
       </form>
     </div>
+-->
 
 <!-- Footer -->
 <?php include('footer.php') ?>
