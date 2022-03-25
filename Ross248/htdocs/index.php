@@ -8,88 +8,12 @@
   <title>Ross248</title>
   <meta name="description" content="Notre solution a pour but de garantir la fiabilité des pilotes, au travers de divers tests psychotechniques.">
   <meta name="robots" content="index, follow" />
-  <link rel="icon" type="image/png" href="../img/logo.png">
-  <link rel="stylesheet" href="../css/nav.css">
-  <link rel="stylesheet" href="../css/index2.css">
-  <link rel="stylesheet" href="../css/backtotop.css">
-  <link rel="stylesheet" href="../css/footer.css">
-  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>   
+  <?php include('link.php')?>   
 </head>
 <body>
-  
-<nav>
-  <div class="logoNav">
-    <a href="http://localhost:8888/Ross248/htdocs/index.php">
-      <img src="https://i.imgur.com/t4D6X7R.png">
-    </a>
-  </div>
-  <div class="contenuNav">
-    <a href="index.php">Accueil</a>
-    <a href="connexion.php">Connexion</a>
-    <a href="faq.php">FAQ</a>
-    <a href="index.php#contact">Contact</a>
-    <a href="decouvrir.php">L'équipe</a>
-    <a href="quiz.php">Quizz</a>
-    <a id="boutonLangues">
-      <i class='fa fa-flag'></i><ion-icon name="arrow-dropdown"></ion-icon>
-    </a>
-  </div>
-  <div id="listeLangues" class="cacherListeLangues">
-        <div class="langue">
-      <a href="../htdocs/index.php">
-        <img class="flag" src="../img/fr.png">
-      </a>
-    </div>
-        <div class="langue">
-      <a href="../htdocs/en/index.php">
-        <img class="flag" src="../img/en.png">
-      </a>
-    </div>
-        <div class="langue">
-      <a href="../htdocs/ar/index.php">
-        <img class="flag" src="../img/ar.png">
-      </a>
-    </div>
-        <div class="langue">
-      <a href="../htdocs/cn/index.php">
-        <img class="flag" src="../img/cn.png">
-      </a>
-        </div>
-      </div>
 
-  <!-- Bouton version mobile -->
-  <div class="contenuNavMobile">
-    <button id="bouton">
-      <ion-icon name="menu"></ion-icon>
-    </button>
-  </div>
-
-  <!-- Menu version mobile -->
-  <div id="menuDeroulant" class="cacherMenuDeroulant">
-    <p>
-      <a href="index.php">Accueil</a>
-      <div id="connexionderoulant">
-        <ul class="listposition">
-          <li class="connexionlist"><a href="connexion.php">Connexion</a></li>
-          <li class="inscriptionlist"><a href="inscription.php">Inscription</a></li>
-          <li class="faqList"><a href="faq.php">FAQ</a></li>
-          <li class="contactList"><a href="index.php#contact">Contact</a></li>
-          <li class="decouvrirList"><a href="decouvrir.php">L'équipe</a></li>
-          <li class="quizzList"><a href="quiz.php">Quizz</a></li>
-        </ul>
-      </div>
-      <div id="listeLanguesMobile">
-                  <a href="../en/index.php">
-            <img class="flag" src="../img/en.png">
-          </a>
-                  <a href="../es/index.php">
-            <img class="flag" src="../img/es.png">
-          </a>
-              </div>
-    </p>
-  </div>
-</nav>
+<!-- Nav -->
+<?php include('nav.php')?>
 
   <div id="haut">
     <div class=videNav></div>
@@ -179,22 +103,8 @@
     <ion-icon name="arrow-dropup-circle"></ion-icon>
 </a>
 
-  <footer id="footer">
-  <div id="contenuFooter">
-    <div class="social">
-      <a href="https://www.facebook.com/ross248" target = "_blank"><ion-icon name="logo-facebook"></ion-icon></a>
-      <a href="https://www.instagram.com/ross248/" target = "_blank"><ion-icon name="logo-instagram"></ion-icon></a>
-      <a href="https://mailto:ross248@gmail.com" target = "_blank"><ion-icon name="mail"></ion-icon></a>
-    </div>
-    <div class="txtFooter">
-      <p>
-        © Ross248, 2021 <br><br>
-        <a href="cgu.php">CGU</a> -
-        <a href="mentions.php">Mentions légales</a>
-      </p>
-    </div>
-  </div>
-</footer>
+<!-- Footer -->
+<?php include('footer.php') ?>
 
   <!--<script src="js/script.js"></script>-->
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
