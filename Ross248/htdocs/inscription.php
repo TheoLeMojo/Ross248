@@ -19,6 +19,98 @@
 
 <!-- Nav -->
 <?php include('nav.php')?>
+
+<!-- test -->
+<div class="videNav"></div>
+<div id="milieu">
+  <div class="txtMilieu">
+        <h1>Bienvenue</h1>
+        <ion-icon name="contact"></ion-icon>
+      </div>
+      <div class="message">
+                      </div>
+  <div class="login-form">
+              <?php 
+                  if(isset($_GET['reg_err']))
+                  {
+                      $err = htmlspecialchars($_GET['reg_err']);
+
+                      switch($err)
+                      {
+                          case 'success':
+                          ?>
+                              <div class="alert alert-success">
+                                  <strong>Succès</strong> inscription réussie !
+                              </div>
+                          <?php
+                          break;
+
+                          case 'password':
+                          ?>
+                              <div class="alert alert-danger">
+                                  <strong>Erreur</strong> mot de passe différent
+                              </div>
+                          <?php
+                          break;
+
+                          case 'email':
+                          ?>
+                              <div class="alert alert-danger">
+                                  <strong>Erreur</strong> email non valide
+                              </div>
+                          <?php
+                          break;
+
+                          case 'email_length':
+                          ?>
+                              <div class="alert alert-danger">
+                                  <strong>Erreur</strong> email trop long
+                              </div>
+                          <?php 
+                          break;
+
+                          case 'name_length':
+                          ?>
+                              <div class="alert alert-danger">
+                                  <strong>Erreur</strong> name trop long
+                              </div>
+                          <?php 
+                          case 'already':
+                          ?>
+                              <div class="alert alert-danger">
+                                  <strong>Erreur</strong> compte deja existant
+                              </div>
+                          <?php 
+
+                      }
+                  }
+                  ?>
+              
+              <form action="inscription_traitement.php" method="post">      
+                  <div class="formulaire">
+                      <ion-icon name="person"></ion-icon>
+                      <input type="text" name="name" class="form-control" placeholder="Name" required="required" autocomplete="off">
+                  </div>
+                  <div class="formulaire">
+                      <ion-icon name="person"></ion-icon>
+                      <input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off">
+                  </div>
+                  <div class="formulaire">
+                      <ion-icon name="lock"></ion-icon>
+                      <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" autocomplete="off">
+                  </div>
+                  <div class="formulaire">
+                      <ion-icon name="lock"></ion-icon>
+                      <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" autocomplete="off">
+                  </div>
+                  <div class="envoyer">
+                      <button type="submit" class="btn btn-primary btn-block">Inscription</button>
+                  </div>   
+              </form>
+          </div>
+  </div>       
+<!-- ancien code -->
+<!--
 <div class="videNav"></div>
 
     <div id="milieu">
@@ -35,11 +127,11 @@
         </div>
       <div class="formulaire">
         <ion-icon name="person"></ion-icon>
-        <input type="password" name="nom" placeholder="nom"/><br />
+        <input type="text" name="nom" placeholder="nom"/><br />
       </div>
       <div class="formulaire">
         <ion-icon name="person"></ion-icon>
-        <input type="password" name="prenom" placeholder="prenom"/><br />
+        <input type="text" name="prenom" placeholder="prenom"/><br />
       </div>
       <div class="formulaire">
         <ion-icon name="lock"></ion-icon>
@@ -54,7 +146,8 @@
     </form>
   </div>
 
-<!-- Footer -->
+                -->
+  <!-- Footer -->
 <?php include('footer.php') ?>
 
   <!--<script src="js/script.js"></script>-->
