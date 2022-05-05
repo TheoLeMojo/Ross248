@@ -8,7 +8,7 @@
     }
 
     // On récupere les données de l'utilisateur
-    $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+    $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = ?');
     $req->execute(array($_SESSION['user']));
     $data = $req->fetch();
    
@@ -19,12 +19,24 @@
     <title>Espace membre</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-control" content="private" />
+    <meta name="description" content="Notre solution a pour but de garantir la fiabilité des pilotes, au travers de divers tests psychotechniques.">
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/index2.css">
+    <link rel="stylesheet" href="../css/backtotop.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
+    <?php include('link.php')?> 
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+  <?php include('nav.php')?>
+  <div class="videNav"></div>
         <div class="container">
             <div class="col-md-12">
                 <?php 
@@ -46,7 +58,7 @@
                 <div class="text-center">
                         <h1 class="p-5">Bonjour <?php echo $data['pseudo']; ?> !</h1>
                         <hr />
-                        <a href="deconnexionbdd.php" class="btn btn-danger btn-lg">Déconnexion</a>
+                        <a href="deconnexion.php" class="btn btn-danger btn-lg">Déconnexion</a>
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#change_password">
                           Changer mon mot de passe
@@ -71,7 +83,7 @@
                             </button>
                          </div>
                             <div class="modal-body">
-                                <form action="layouts/change_password.php" method="POST">
+                                <form action="change_password.php" method="POST">
                                     <label for='current_password'>Mot de passe actuel</label>
                                     <input type="password" id="current_password" name="current_password" class="form-control" required/>
                                     <br />

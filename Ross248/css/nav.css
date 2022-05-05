@@ -75,13 +75,19 @@
     }
     .logoNav {
         position: absolute;
-        left: 1%;
+        right: 1%;
         top: 7%;
     }
     .logoNav img {
         height: 80px;
     }
     .contenuNav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 90px;
+    }
+    .contenuNav #boutonLangue {
         display: flex;
         justify-content: flex-end;
         align-items: center;

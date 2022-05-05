@@ -69,10 +69,10 @@
                           <?php 
                           break;
 
-                          case 'name_length':
+                          case 'pseudo_length':
                           ?>
                               <div class="alert alert-danger">
-                                  <strong>Erreur</strong> name trop long
+                                  <strong>Erreur</strong> pseudo trop long
                               </div>
                           <?php 
                           case 'already':
@@ -89,7 +89,7 @@
               <form action="inscription_traitement.php" method="post">      
                   <div class="formulaire">
                       <ion-icon name="person"></ion-icon>
-                      <input type="text" name="name" class="form-control" placeholder="Name" required="required" autocomplete="off">
+                      <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
                   </div>
                   <div class="formulaire">
                       <ion-icon name="person"></ion-icon>

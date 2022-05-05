@@ -1,7 +1,7 @@
 <nav>
 <div class="logoNav">
   <a href="http://localhost:8888/Ross248/htdocs/index.php">
-    <img src="https://i.imgur.com/t4D6X7R.png">
+    <img src="../img/Infinite_measures.png">
   </a>
 </div>
 <div class="contenuNav">

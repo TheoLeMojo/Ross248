@@ -89,9 +89,9 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: #e6e6e6;
-    width: 300px;
+    width: 350px;
     height: 50px;
     border-radius: 50px;
     margin: 0 auto;
@@ -104,7 +104,7 @@ body {
 
 .formulaire input {
     height: 40px;
-    width: 220px;
+    width: 250px;
     border: none;
     background-color: #e6e6e6;
 }
@@ -122,7 +122,8 @@ body {
 /* Positionnement de l'icÃ´ne Ã  l'intÃŠrieur du formulaire */
 
 .formulaire ion-icon {
-    margin-left: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
