@@ -24,8 +24,8 @@
     <div class="imgtop">
       <!--<img src="https://i.imgur.com/wxYQfml.jpg"></img>-->
       <div class="imgTexte">
-        <h1>Ross248</h1>
-        <h4>Innovation et sécurité</h4>
+        <h1>FAQ</h1>
+        <h4></h4>
         <div class="boutonBas">
           <a href="#milieuImg">
             <ion-icon name="arrow-dropdown-circle"></ion-icon>
@@ -41,45 +41,23 @@
 
     <div class="questions">
         <div class="visible-pannel">
-            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h2>Paiement </h2>
             <img src="ressources/croix.svg" alt="croix animation">
         </div>
         <div class="toggle-pannel">
-            <h4>Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem et asperiores, quod qui in ducimus rerum nisi dolorum. Optio, vel?</p>
+            <h4>Quels sont les moyens de paiement accepté? </h4>
+            <p>Vous pouvez régler par cartes bancaires,PayPal.</p>
         </div>
     </div>
 
     <div class="questions">
         <div class="visible-pannel">
-            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h2>les résultat de test</h2>
             <img src="ressources/croix.svg" alt="croix animation">
         </div>
         <div class="toggle-pannel">
-            <h4>Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus neque et, excepturi sequi laboriosam at sit exercitationem repellat voluptate aliquam? Officiis inventore quibusdam doloremque amet quidem dolor quod praesentium in, ullam tenetur corrupti ducimus commodi, minima, nam maiores temporibus assumenda necessitatibus natus voluptas! Mollitia distinctio consequuntur eos aut voluptatibus pariatur?</p>
-        </div>
-    </div>
-
-    <div class="questions">
-        <div class="visible-pannel">
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <img src="ressources/croix.svg" alt="croix animation">
-        </div>
-        <div class="toggle-pannel">
-            <h4>Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, est!</p>
-        </div>
-    </div>
-
-    <div class="questions">
-        <div class="visible-pannel">
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <img src="ressources/croix.svg" alt="croix animation">
-        </div>
-        <div class="toggle-pannel">
-            <h4>Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati iusto soluta sunt quos ex, quidem a. Perferendis non corporis dolore reiciendis corrupti temporibus voluptatum veniam aperiam nemo cumque fugit atque facere eius veritatis facilis, qui vero libero, molestias optio fuga labore, similique sint. Tempora enim, eum quia, repellendus rerum repellat quae quas error reprehenderit dolorum est nesciunt ducimus provident tenetur!</p>
+            <h4>Je n'ai pas reçu d'e-mail avec mes résultats de test.Que devrais-je faire?</h4>
+            <p>Tout d'abord, veuillez vérifier votre dossier Spam - il est possible que votre fournisseur de messagerie ait mis notre message là-bas</p>
         </div>
     </div>
 
