@@ -8,9 +8,15 @@
   <a href="index.php">Accueil</a>
   <a href="connexion.php">Connexion</a>
   <a href="faq.php">FAQ</a>
-  <a href="index.php#contact">Contact</a>
+  <a href="contact.php">Contact</a>
   <a href="decouvrir.php">L'équipe</a>
+  <?php if (isset($_SESSION['user'] )) {?>
   <a href="quiz.php">Quizz</a>
+  <a href="landing.php">Espace membre</a>
+  <?php } elseif(isset($_SESSION['admin'] )) { ?>
+  <a href="quiz.php">Quizz</a>
+  <a href="admin/adminlanding.php"> Espace administration </a>
+  <?php } else {} ?>
   <a id="boutonLangues">
     <i class='fa fa-flag'></i><ion-icon name="arrow-dropdown"></ion-icon>
   </a>

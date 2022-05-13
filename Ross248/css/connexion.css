@@ -43,7 +43,7 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -135,7 +135,7 @@ body {
     border: none;
     border-radius: 50px;
     background-color: #e6e6e6;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
@@ -152,7 +152,7 @@ body {
 /* Police et alignement des textes dans les formulaires */
 
  ::placeholder {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: left;
 }
 

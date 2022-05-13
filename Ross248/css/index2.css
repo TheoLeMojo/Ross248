@@ -60,17 +60,17 @@
     .imgSlideRight2 {
         margin-left: 2vw;
     }
-    #contact {
+    .contact {
         padding: 5% 5% 15% 5%;
         flex-shrink: 0;
     }
-    #contact h3 {
+    .contact h3 {
         font-size: 9vw;
     }
-    #contact p {
+    .contact p {
         font-size: 5vw;
     }
-    #contact ion-icon {
+    .contact ion-icon {
         font-size: 12vw;
     }
     .rs {
@@ -120,13 +120,14 @@
     .texteGauche {
         margin-right: 40px;
     }
-    #contact {
+    .contact {
         padding: 5% 5% 8% 5%;
     }
 }
 
 .animer {
     opacity: 0;
+    text-align: center;
 }
 
 html,
@@ -134,7 +135,7 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -147,7 +148,7 @@ body {
     width: 100%;
     height: 100%;
     flex-shrink: 0;
-    background-image: url("https://i.imgur.com/wxYQfml.jpg");
+    background-image: url(../img/background-index-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -279,7 +280,7 @@ body {
     text-align: center;
 }
 
-#contact {
+.contact {
     margin-top: -21px;
     background-color: #90c0ff;
     font-size: 2.5vw;
@@ -290,6 +291,7 @@ body {
 .rs {
     display: flex;
     justify-content: space-between;
+    margin: 40px;
     padding-top: 4vw;
     text-align: center;
 }
@@ -392,22 +394,16 @@ body #progress {
     font-size: 3rem;
 }
 
-#quiz h1 span,
-body h1 i {
-    color: #ffa502;
-}
-
 #quiz h3 {
-    color: #ffa502;
+    color: blue;
     font-size: 1.5rem;
 }
 
 #quizz {
-    display: grid;
+    display: flex;
     align-items: center;
     justify-items: center;
     min-height: 100vh;
-    background: #2f3542;
     color: #dfe4ea;
 }
 
@@ -423,7 +419,7 @@ body h1 i {
 }
 
 #faq body {
-    font-family: Raleway, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #faq h1 {
@@ -443,48 +439,3 @@ body h1 i {
     justify-content: center;
     align-items: flex-start;
 }
-
-
-/*
-#faq .questions {
-    width: 100%;
-    height: auto;
-    margin: 5px;
-}
-
-#faq .visible-pannel {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #f1f1f1;
-    border-radius: 10px;
-    position: relative;
-    z-index: 100;
-}
-
-#faq .visible-pannel h2 {
-    margin-left: 10px;
-    padding: 15px 5px;
-    font-size: 25px;
-}
-
-#faq .visible-pannel img {
-    margin-right: 10px;
-    width: 25px;
-    cursor: pointer;
-}
-
-#faq .toggle-pannel {
-    padding: 0px 15px;
-    height: 0px;
-    opacity: 0;
-}
-
-#faq .toggle-pannel h4 {
-    font-size: 18px;
-    padding-bottom: 10px;
-}
-
-#faq .toggle-pannel p {
-    line-height: 1.5;
-}*/
