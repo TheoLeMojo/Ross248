@@ -10,9 +10,14 @@ class Question {
 }
 let questions = [
     new Question("Date de création d'infinite measure", ["1920", "1999", "2012", "2021"], "2021"),
-    new Question("Quelle méthode Javascript permet de vérifier si un élément figure dans un tableau", ["isNaN()", "includes()", "findIndex()", "isOdd()"], "includes()"),
-    new Question("Quelle méthode transforme du JSON en un objet Javascript ?", ["JSON.parse()", "JSON.stringify()", "JSON.object()", "JSON.toJS"], "JSON.parse()"),
-    new Question("Quel objet Javascript permet d'arrondir à l'entier le plus proche", ["Math.ceil()", "Math.floor()", "Math.round()", "Math.random()"], "Math.round()")
+    new Question("Quels sont les produits commercialisés par l’entreprise ?", ["capteurs", "radios", "enceintes", "montres"], "capteur"),
+    new Question("Quels sont nos collaborateurs ?", ["Ross248", "RATP", "SNCF", "Air France"], "Ross248"),
+    new Question("Quel est le temps nécessaire pour fabriquer un produit ?", ["3 mois", "5 mois", "9 mois", "12 mois"], "9 mois"),
+    new Question("Où est basée l'entreprise ?", ["états-unis", "France", "Chine", "Belgique"], "France"),
+    new Question("Quel est le nom du fondateur d'infinite measure ?", ["ECE", "ESIEE", "ISEP", "ESME"], "ISEP"),
+    new Question("Quel était son effectif de départ ?", ["100", "6", "25", "19"], "6"),
+    new Question("À partir de quelle fréquence cardiaque maximale l’humain est-il considéré en danger ?", ["200", "154", "95", "100"], "200"),
+    new Question("Quelle est la fréquences audibles par l'oreille humaine ?", ["20Hz-20KHz", "10Hz-30KHz", "5Hz-100KHz", "65Hz-150KHz"], "20Hz-20KHz")
 ];
 
 console.log(questions);
