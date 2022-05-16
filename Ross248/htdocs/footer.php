@@ -7,9 +7,9 @@
     </div>
     <div class="txtFooter">
       <p>
-        © Ross248, 2021 <br><br>
-        <a href="cgu.php">CGU</a> -
-        <a href="mentions.php">Mentions légales</a>
+        © Infinite measures, 2021 <br><br>
+        <a href="../pdf/CGU.pdf" target="_blank">CGU</a> -
+        <a href="../pdf/ML.pdf" target="_blank">Mentions légales</a>
       </p>
     </div>
   </div>

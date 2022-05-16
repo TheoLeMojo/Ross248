@@ -1,5 +1,74 @@
 <?php 
-    require_once 'config.php'; // On inclu la connexion à la bdd
+
+/*     $error = "";
+
+    function create_userid(){
+
+        $length = rand(4,20);
+        $number = "";
+        for ($i=0; $i < $length; $i++){
+            $new_rand = rand(0,9);
+
+            $number = $number . $new_rand;
+        }
+
+        return $number;
+    }
+
+
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+
+        require_once 'config.php'; // On inclu la connexion à la bdd
+        
+        $arr['userid'] = create_userid();
+        $condition = true;
+        while($condition)
+        {
+            $query = "select id from utilisateurs where userid = :userid limit 1";
+            $stm = $bdd->prepare($query);
+            if($stm){
+                $check = $stm->execute($arr);
+                if($check){
+
+                    $data = $stm->fetchAll(PDO::FETCH_ASSOC);
+                    if(is_array($data) && count($data) > 0){
+                        $arr['userid'] = create_userid();
+                        continue;
+                    }
+
+                }
+            }
+            $condition = false;
+        }
+
+        $arr['pseudo']= $_POST['pseudo'];
+        $arr['email']= $_POST['email'];
+        $arr['password']= hash('sha1',$_POST['password']);
+        $arr['rank'] = "user";
+
+        $query = "insert into utilisateurs (userid,pseudo,email,password,rank) values(:userid,:pseudo,:email,:password,:rank)";
+        $stm = $bdd -> prepare($query);
+        if($stm){
+            $check = $stm -> execute($arr);
+            if(!$check){
+                $error = "impossible d'enregistrer dans la base de données";
+            }
+            if($error == ""){
+                header("location: connexion.php");
+                die;
+            }
+        }
+
+    } */
+
+
+
+
+
+
+
+
+    require_once 'config.php';
 
     // Si les variables existent et qu'elles ne sont pas vides
     if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['password_retype']))
@@ -9,7 +78,7 @@
         $email = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
         $password_retype = htmlspecialchars($_POST['password_retype']);
-        $age = htmlspecialchars($_POST['age']);
+        $rank = "user";
 
         // On vérifie si l'utilisateur existe
         $check = $bdd->prepare('SELECT pseudo, email, password FROM utilisateurs WHERE email = ?');
@@ -34,12 +103,13 @@
                             $ip = $_SERVER['REMOTE_ADDR']; 
                             
                             // On insère dans la base de données
-                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, password, ip) VALUES(?, ?, ?, ?)');
+                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, password, ip, rank) VALUES(?, ?, ?, ?, ?)');
                             $insert->execute(array(
                                  $pseudo,
                                  $email,
                                  $password,
-                                 $ip
+                                 $ip,
+                                 $rank,
                                  )
                             );
                             // On redirige avec le message de succès
@@ -50,4 +120,4 @@
                 }else{ header('Location: inscription.php?reg_err=email_length'); die();}
             }else{ header('Location: inscription.php?reg_err=pseudo_length'); die();}
         }else{ header('Location: inscription.php?reg_err=already'); die();}
-    }
+    } 

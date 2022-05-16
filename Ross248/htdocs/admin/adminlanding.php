@@ -1,73 +1,42 @@
 <?php 
     session_start();
-    require_once 'config.php'; // ajout connexion bdd 
+    require_once '../config.php'; // ajout connexion bdd 
    // si la session existe pas soit si l'on est pas connecté on redirige
-    if(!isset($_SESSION['user'])){
-        echo "Erreur de connexion à votre session";
-        header('Location:connexion.php');
+    if(!isset($_SESSION['admin'])){
+        header('Location:../connexion.php');
         die();
     }
 
     // On récupere les données de l'utilisateur
     $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = ?');
-    $req->execute(array($_SESSION['user']));
+    $req->execute(array($_SESSION['admin']));
     $data = $req->fetch();
    
 ?>
 <!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-control" content="private" />
-  <title>Infinite measures</title>
-  <meta name="description" content="Notre solution a pour but de garantir la fiabilité des pilotes, au travers de divers tests psychotechniques.">
-  <meta name="robots" content="index, follow" />
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel="icon" type="image/png" href="../img/logo.png">
-  <link rel="stylesheet" href="../css/nav.css">
-  <link rel="stylesheet" href="../css/index2.css">
-  <link rel="stylesheet" href="../css/backtotop.css">
-  <link rel="stylesheet" href="../css/footer.css">
-  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-  <link rel="stylesheet" href="../css/connexion.css">  
+<html lang="en">
+  <head>
+    <title>Espace administrateur</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-control" content="private" />
+    <meta name="description" content="Notre solution a pour but de garantir la fiabilité des pilotes, au travers de divers tests psychotechniques.">
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/png" href="../../img/logo.png">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../../css/index2.css">
+    <link rel="stylesheet" href="../../css/backtotop.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
+    <?php include('../link.php')?> 
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-  <?php include('nav.php')?>
+  <?php include('../nav.php')?>
   <div class="videNav"></div>
-
-  <div class="container">
-   <div class="row"> 
-      <div class="col-sm-0 col-md-2 col-lg-1"></div>
-      <div class="col-sm-12 col-md-8 col-lg-10"> 
-         <form action="avatar.php" method="post" enctype="multipart/form-data">
-            <label for="file" style="margin-bottom: 0; margin-top: 5px; display: inline-flex">
-               <input id="file" type="file" name="file" class="hide-upload" required/>
-               <i class="fa fa-plus image-plus"></i>
-               <input type="submit" name="avatar" value="Envoyer">
-            </label>
-         </form>
-      </div>
-   </div>
-</div>
-
-<div>
-   <?php
-      if(file_exists("public/avatars/". $_SESSION['id'] . "/" . $_SESSION['avatar']) && isset($_SESSION['avatar'])){
-   ?>
-      <img src="<?= "public/avatars/". $_SESSION['id'] . "/" . $_SESSION['avatar']; ?>" width="120" style="width: 100%"/>
- 
-   <?php
-      }else{
-   ?>
-      <img src="public/avatars/defaults/default.png" width="120" style="width: 100%"/>
-   <?php
-      }
-   ?>
-</div>
         <div class="container">
             <div class="col-md-12">
                 <?php 
@@ -87,9 +56,9 @@
 
 
                 <div class="text-center">
-                        <h1 class="p-5">Bonjour <?php echo $data['email']?>!</h1>
+                        <h1 class="p-5">Bonjour <?php echo $data['pseudo']; ?> !</h1>
                         <hr />
-                        <a href="deconnexion.php" class="btn btn-danger btn-lg">Déconnexion</a>
+                        <a href="../deconnexion.php" class="btn btn-danger btn-lg">Déconnexion</a>
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#change_password">
                           Changer mon mot de passe
@@ -114,7 +83,7 @@
                             </button>
                          </div>
                             <div class="modal-body">
-                                <form action="change_password.php" method="POST">
+                                <form action="../change_password.php" method="POST">
                                     <label for='current_password'>Mot de passe actuel</label>
                                     <input type="password" id="current_password" name="current_password" class="form-control" required/>
                                     <br />

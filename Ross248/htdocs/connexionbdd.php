@@ -11,7 +11,7 @@
         $email = strtolower($email); // email transformé en minuscule
         
         // On regarde si l'utilisateur est inscrit dans la table utilisateurs
-        $check = $bdd->prepare('SELECT pseudo, email, password FROM utilisateurs WHERE email = ?');
+        $check = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = ?');
         $check->execute(array($email));
         $data = $check->fetch();
         $row = $check->rowCount();
@@ -27,12 +27,27 @@
                 // Si le mot de passe est le bon
                 if(password_verify($password, $data['password']))
                 {
+                    $result = $bdd->prepare('SELECT rank from utilisateurs where email = ?');
+                    $result->execute(array($email));
+                    $datarank = $result->fetch();
+
+
+                    if($datarank == 'admin')
+                    {
+                        $_SESSION['admin'] = $datarank;
+                        header ('Location: amdin/adminlanding.php');
+                        die();
+                    }
                     // On créer la session et on redirige sur landing.php
-                    $_SESSION['user'] = $data['pseudo'];
-                    header('Location: landing.php');
-                    die();
+                    else{
+                        $_SESSION['user'] = $data['pseudo'];
+                        header('Location: landing.php');
+                        die();
+                    }
+                    // On créer la session et on redirige sur landing.php
                 }else{ header('Location: index.php?login_err=password'); die(); }
             }else{ header('Location: index.php?login_err=email'); die(); }
         }else{ header('Location: index.php?login_err=already'); die(); }
     }else{ header('Location: index.php'); die();} // si le formulaire est envoyé sans aucune données
-    ?>
+
+?>

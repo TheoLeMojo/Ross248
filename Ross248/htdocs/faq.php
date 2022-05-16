@@ -1,20 +1,4 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-control" content="private" />
-  <title>Ross248</title>
-  <meta name="description" content="Notre solution a pour but de garantir la fiabilité des pilotes, au travers de divers tests psychotechniques.">
-  <meta name="robots" content="index, follow" />
-  <link rel="icon" type="image/png" href="../img/logo.png">
-  <link rel="stylesheet" href="../css/nav.css">
-  <link rel="stylesheet" href="../css/index2.css">
-  <link rel="stylesheet" href="../css/backtotop.css">
-  <link rel="stylesheet" href="../css/footer.css">
-  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
-  <?php include('link.php')?> 
-</head>
+<?php include 'header.php' ?>
 <body>
 <!-- Nav -->
 <?php include('nav.php')?>
@@ -24,8 +8,8 @@
     <div class="imgtop">
       <!--<img src="https://i.imgur.com/wxYQfml.jpg"></img>-->
       <div class="imgTexte">
-        <h1>FAQ</h1>
-        <h4></h4>
+        <h1>Infinite measures</h1>
+        <h4>Innovation et sécurité</h4>
         <div class="boutonBas">
           <a href="#milieuImg">
             <ion-icon name="arrow-dropdown-circle"></ion-icon>
@@ -35,7 +19,7 @@
     </div>
   </div>
 
-<div id="faq">
+  <div id="faq">
     <h1>Consultez la Foire aux questions !</h1>
     <div class="container-faq">
 
@@ -86,7 +70,6 @@
         
       </div>
     </div>
-    
 
 
 
