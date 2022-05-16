@@ -15,7 +15,7 @@
   <a href="landing.php">Espace membre</a>
   <?php } elseif(isset($_SESSION['admin'] )) { ?>
   <a href="quiz.php">Quizz</a>
-  <a href="admin/adminlanding.php"> Espace administration </a>
+  <a href="admin/adminlanding.php">Espace administration</a>
   <?php } else {} ?>
   <a id="boutonLangues">
     <i class='fa fa-flag'></i><ion-icon name="arrow-dropdown"></ion-icon>
