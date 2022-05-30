@@ -1,0 +1,13 @@
+.btntop ion-icon {
+    opacity: 1;
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    z-index: 1024;
+    cursor: pointer;
+    display: inline-block;
+    transform: scale(1.25, 1.25);
+    scroll-behavior: smooth;
+    touch-action: manipulation;
+    color: #5057FF;
+}
