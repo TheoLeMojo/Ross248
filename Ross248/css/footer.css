@@ -23,6 +23,8 @@
 }
 
 #footer {
+    display: flex;
+    flex-direction: row;
     z-index: 5;
     width: 100%;
 }
@@ -30,13 +32,17 @@
 #contenuFooter {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
     width: 100%;
-    background-color: #5057FF;
+    background-color:rgb(2, 81, 112);
 }
 
 .social {
     display: block;
+    justify-content: center;
+    
 }
 
 .social ion-icon {
@@ -44,9 +50,18 @@
     padding-left: 1.5vw;
 }
 
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+}
+
+
+
+
 .txtFooter {
     display: block;
     padding-right: 1.5vw;
+    
 }
 
 .txtFooter p {
@@ -56,4 +71,9 @@
 .txtFooter a {
     text-decoration: underline;
     color: white;
+}
+
+.element{
+    display: flex;
+    justify-content: center
 }

@@ -9,6 +9,10 @@
 
 <form action="" method="post">      
     <div class="formulaire-contact">
+      <br>
+      <br>
+      <h2>Nous contacter :</h2>
+      <br>
         <label for="name">Nom :</label>
         <input type="text" id="name" name="user_name">
         <label for="mail">E-mail&nbsp;:</label>

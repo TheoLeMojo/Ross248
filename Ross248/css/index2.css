@@ -19,16 +19,16 @@
         margin-top: 30vh;
         font-size: 6vw;
     }
-    #milieuImg {
+    #phase1 {
         flex-direction: column;
         padding: 5% 5% 10% 5%;
         flex-shrink: 0;
     }
-    #milieuImg img {
+    #phase1 img {
         padding: 10% 0 10% 0;
         height: 32vw;
     }
-    .texteDroite {
+    .droitetxtt {
         font-size: 5vw;
     }
     #milieu {
@@ -42,19 +42,19 @@
         font-size: 5vw;
         flex-direction: column;
     }
-    #bas {
+    #last {
         flex-direction: column;
         flex-shrink: 0;
         padding: 13% 8% 13% 8%;
     }
-    #bas img {
+    #last img {
         height: 48vw;
         margin-right: 10vw;
     }
-    #bas p {
+    #last p {
         font-size: 5vw;
     }
-    .texteGauche {
+    .gauchetxtt {
         padding-top: 70%;
     }
     .imgSlideRight2 {
@@ -89,15 +89,15 @@
         margin-top: 17vh;
         font-size: 3vw;
     }
-    #milieuImg {
+    #phase1 {
         flex-direction: row;
         padding: 5% 5% 8% 5%;
     }
-    #milieuImg img {
+    #phase1 img {
         height: 17vw;
         padding-right: 50px;
     }
-    .texteDroite {
+    .droitetxtt {
         font-size: 2vw;
     }
     #milieu {
@@ -107,17 +107,17 @@
     .icones ion-icon {
         font-size: 5vw;
     }
-    #bas {
+    #last {
         flex-direction: row;
         padding: 5% 48% 8% 8%;
     }
-    #bas img {
+    #last img {
         height: 26vw;
     }
-    #bas p {
+    #last p {
         font-size: 2vw;
     }
-    .texteGauche {
+    .gauchetxtt {
         margin-right: 40px;
     }
     .contact {
@@ -135,7 +135,7 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -148,9 +148,19 @@ body {
     width: 100%;
     height: 100%;
     flex-shrink: 0;
-    background-image: url(../img/background-index-image.jpg);
+    background-image: url(../img/deg1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#haut {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
+
+#haut h1 {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #haut img:hover {
@@ -161,9 +171,11 @@ body {
     width: 100%;
     height: 100%;
     flex-shrink: 0;
-    background-image: url("https://i.imgur.com/tx0ILn1.png");
+    background-image: url(../img/deg1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 
 .imgtop {
@@ -177,7 +189,7 @@ body {
 }
 
 .imgTexte {
-    text-shadow: 3px 3px #333;
+    text-shadow: 1px 1px #333;
     color: white;
     animation-name: bounceInUp;
     animation-duration: 1s;
@@ -192,26 +204,56 @@ body {
     transition: transform 1s ease;
 }
 
-#milieuImg {
+.midd h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#allo {
+    border: 5px solid black;
+}
+
+#phase1 {
     display: flex;
     align-items: center;
-    background-color: #ffffff;
     text-align: center;
     font-weight: 300;
 }
 
-#milieuImg img {
+#phase1 {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-image: url(../img/fbll.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#phase1 img {
     position: relative;
     left: -1000px;
 }
 
-#milieuImg img:hover {
+#phase1 img:hover {
     transition: all ease 0.3s;
     transform: scale(1.05);
 }
 
 #milieu {
-    background-color: #90c0ff;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-image: url(../img/deg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: row-reverse;
+}
+
+#milieu {
     text-align: center;
     font-weight: 300;
     display: inline-block;
@@ -232,15 +274,33 @@ body {
     justify-content: space-between;
 }
 
-.milieuGauche,
-.milieuCentre,
-.milieuDroite {
+.partieg,
+.partiem,
+.partied {
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
 }
 
-#bas {
+#last {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-image: url(../img/deg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#midd {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-color: aqua;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#last {
     /* Taille police en haut */
     display: flex;
     align-items: center;
@@ -249,14 +309,14 @@ body {
     margin-bottom: 0px;
 }
 
-#bas img {
+#last img {
     position: absolute;
     right: -1000px;
     box-shadow: -10px 10px 30px -20px rgba(0, 0, 0, 0.75);
     border-radius: 15px;
 }
 
-#bas img:hover {
+#last img:hover {
     transition: transform ease 0.3s;
     transform: scale(1.1);
     z-index: 9;
@@ -270,23 +330,24 @@ body {
     margin-top: 5vw;
 }
 
-#bas p {
+#last p {
     /* Taille police en haut */
     font-weight: 300;
     display: inline-block;
 }
 
-.texteGauche {
+.gauchetxtt {
     text-align: center;
 }
 
-.contact {
+
+/* .contact {
     margin-top: -21px;
     background-color: #90c0ff;
     font-size: 2.5vw;
     font-weight: 300;
     text-align: center;
-}
+} */
 
 .rs {
     display: flex;
@@ -310,15 +371,15 @@ body {
 }
 
 .fb ion-icon {
-    color: #4267b2;
+    color: black
 }
 
 .email ion-icon {
-    color: #c03a2b;
+    color: black
 }
 
 .insta ion-icon {
-    color: #9933b0;
+    color: black
 }
 
 @keyframes appear {

@@ -63,9 +63,9 @@
     <img class="imgSlideRight2" src="../img/courbe-fr.png">
   </div>
 
-  <div id="contact">
+<!--  <div id="contact">
     <h3 class="animer">Contact</h3>
-    <div class="rs"><!-- réseaux sociaux -->
+    <div class="rs"> réseaux sociaux
       <div class="fb animer">
         <a href="https://www.facebook.com/InfiniteMeasuresFr" target = "_blank"><ion-icon name="logo-facebook"></ion-icon></a>
         <p>InfiniteMeasuresFr</p>
@@ -82,7 +82,7 @@
       </div>
 
     </div>
-  </div>
+  </div> 
 
 
   <a id="backtotop" class = "btntop" role="button" href="#" accesskey="t">
@@ -90,7 +90,7 @@
     <img src = "../img/arrowtop.png" width="40" height="40">
   </i>
 </a>
-
+-->
 <!-- Footer -->
 <?php include('footer.php') ?>
 

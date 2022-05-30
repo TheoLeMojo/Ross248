@@ -32,7 +32,7 @@
                     $datarank = $result->fetch();
 
 
-                    if($datarank == 'admin')
+                    if($datarank['rank'] == 'admin')
                     {
                         $_SESSION['admin'] = $datarank;
                         header ('Location: amdin/adminlanding.php');
@@ -40,7 +40,7 @@
                     }
                     // On créer la session et on redirige sur landing.php
                     else{
-                        $_SESSION['user'] = $data['pseudo'];
+                        $_SESSION['user'] = $data;
                         header('Location: landing.php');
                         die();
                     }

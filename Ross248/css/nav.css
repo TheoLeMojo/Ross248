@@ -105,7 +105,7 @@
 nav {
     position: fixed;
     top: 0;
-    background-color: #5057FF;
+    background-color:rgb(2, 81, 112);
     width: 100%;
     z-index: 10;
     transition: all 1s ease;
@@ -132,6 +132,7 @@ nav {
     padding-left: 25px;
     padding-right: 25px;
     font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .contenuNav a:hover {

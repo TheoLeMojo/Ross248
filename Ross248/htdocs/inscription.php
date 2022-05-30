@@ -29,6 +29,14 @@
                           <?php
                           break;
 
+                          case 'password_character':
+                            ?>
+                            <div class="alert alert-success">
+                                <strong>Erreur</strong> Votre mot de passe doit contenir au moins une Majuscule, une minuscule, un nombre et un charactère spécial !
+                            </div>
+                          <?php
+                          break;
+
                           case 'password':
                           ?>
                               <div class="alert alert-danger">
@@ -83,6 +91,8 @@
                       <ion-icon name="lock"></ion-icon>
                       <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" autocomplete="off">
                   </div>
+                  <div id="strength-bar" style="width: 240px"></div>
+                  </div>
                   <div class="formulaire">
                       <ion-icon name="lock"></ion-icon>
                       <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" autocomplete="off">
@@ -92,7 +102,7 @@
                   </div>
                   <div class="formulaire">
                     <input type="checkbox" id="CGU" name="CGU" required>
-                    <label for="CGU">En cochant cette cas vous acceptez les <a href="../pdf/CGU.pdf" target="_blank">Conditions Générales d'Utilisation</a></label>
+                    <label for="CGU">En cochant cette case vous acceptez les <a href="../pdf/CGU.pdf" target="_blank">Conditions Générales d'Utilisation</a></label>
                   </div>   
               </form>
           </div>
@@ -139,6 +149,7 @@
 <?php include('footer.php') ?>
 
   <!--<script src="js/script.js"></script>-->
+  <script src="../js/password-bar.js"></script>
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="../js/index.js"></script>

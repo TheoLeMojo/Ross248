@@ -91,6 +91,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     background-color: #e6e6e6;
+    font-size: small;
     width: 350px;
     height: 50px;
     border-radius: 50px;
@@ -124,6 +125,16 @@ body {
 .formulaire ion-icon {
     margin-left: 20px;
     margin-right: 20px;
+}
+
+#strength-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgb(214, 214, 214);
+    height: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
 }
 
 
