@@ -2,7 +2,7 @@
     session_start();
     require_once 'config.php'; // ajout connexion bdd 
    // si la session existe pas soit si l'on est pas connecté on redirige
-    if(!isset($_SESSION['user'])){
+    if(!isset($_SESSION['email'])){
         echo "Erreur de connexion à votre session";
         header('Location:connexion.php');
         die();
@@ -10,7 +10,7 @@
 
     // On récupere les données de l'utilisateur
     $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = ?');
-    $req->execute(array($_SESSION['user']));
+    $req->execute(array($_SESSION['email']));
     $data = $req->fetch();
    
 ?>
@@ -39,7 +39,7 @@
   <?php include('nav.php')?>
   <div class="videNav"></div>
 
-  <div class="container">
+<!--   <div class="container">
    <div class="row"> 
       <div class="col-sm-0 col-md-2 col-lg-1"></div>
       <div class="col-sm-12 col-md-8 col-lg-10"> 
@@ -66,7 +66,7 @@
       <img src="public/avatars/defaults/default.png" width="120" style="width: 100%"/>
    <?php
       }
-   ?>
+   ?> -->
 </div>
         <div class="container">
             <div class="col-md-12">
@@ -87,7 +87,7 @@
 
 
                 <div class="text-center">
-                        <h1 class="p-5">Bonjour <?php echo $data['email']?>!</h1>
+                        <h1 class="p-5">Bonjour <?php echo $data['pseudo']?>!</h1>
                         <hr />
                         <a href="deconnexion.php" class="btn btn-danger btn-lg">Déconnexion</a>
                         <!-- Button trigger modal -->

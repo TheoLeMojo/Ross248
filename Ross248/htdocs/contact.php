@@ -1,4 +1,8 @@
 <?php include 'header.php' ?>
+<head>
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+
 <body>
     
 <!-- Nav -->
@@ -6,26 +10,24 @@
 
 <!-- Test -->
 <div class="videNav"></div>
+<div class="videNav"></div>
 
-<form action="" method="post">      
-    <div class="formulaire-contact">
-      <br>
-      <br>
-      <h2>Nous contacter :</h2>
-      <br>
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="user_name">
-        <label for="mail">E-mail&nbsp;:</label>
-        <input type="email" id="mail" name="user_mail">
-        <label for="msg">Message :</label>
-        <textarea id="msg" name="user_message"></textarea>
-    </div>
-    <div class="envoyer">
-        <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
-    </div>   
-</form>
 
 <div class="contact">
+  <form action="" method="post"> 
+    <h1>Contact</h1>     
+      <div action="traitement-contact.php" method="post" class="formulaire-contact">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name">
+          <label for="mail">E-mail&nbsp;:</label>
+          <input type="email" id="email" name="email">
+          <label for="msg">Message :</label>
+          <textarea id="msg" name="msg"></textarea>
+      </div>
+      <div class="envoyer">
+          <button type="submit" name="sendform" class="btn btn-primary btn-block">Envoyer</button>
+      </div>   
+  </form>
     <h3 class="animer">Contact</h3>
     <div class="rs"><!-- réseaux sociaux -->
       <div class="fb animer">
@@ -42,7 +44,6 @@
         <a href="https://www.instagram.com/ross248/" target = "_blank"><ion-icon name="logo-instagram"></ion-icon></a>
         <p>Infinite measures</p>
       </div>
-
     </div>
   </div>
 

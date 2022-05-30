@@ -31,7 +31,7 @@
 
                           case 'password_character':
                             ?>
-                            <div class="alert alert-success">
+                            <div class="alert alert-danger">
                                 <strong>Erreur</strong> Votre mot de passe doit contenir au moins une Majuscule, une minuscule, un nombre et un charactère spécial !
                             </div>
                           <?php

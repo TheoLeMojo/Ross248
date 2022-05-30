@@ -10,13 +10,23 @@
   <a href="faq.php">FAQ</a>
   <a href="contact.php">Contact</a>
   <a href="decouvrir.php">L'équipe</a>
-  <?php if (isset($_SESSION['user'] )) {?>
-  <a href="quiz.php">Quizz</a>
-  <a href="landing.php">Espace membre</a>
-  <?php } elseif(isset($_SESSION['admin'] )) { ?>
-  <a href="quiz.php">Quizz</a>
-  <a href="admin/adminlanding.php">Espace administration</a>
-  <?php } else {} ?>
+  <?php
+
+  if (isset($_SESSION['email'] )) {
+    echo"<a href='quiz.php'>Quizz</a>";
+
+    require_once "config.php";
+    $recupUser = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = ?');
+    $recupUser->execute(array($_SESSION['email']));
+    $datarank = $recupUser->fetch()['rank'];
+    if($datarank = 'user'){
+      echo"<a href='landing.php'>Espace membre</a>";
+    }elseif($datarank = 'admin') { 
+      echo"<a href='admin/adminlanding.php'>Espace administration</a>";
+    } else {}
+  }else{}
+  
+  ?>
   <a id="boutonLangues">
     <i class='fa fa-flag'></i><ion-icon name="arrow-dropdown"></ion-icon>
   </a>

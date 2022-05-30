@@ -31,19 +31,27 @@
                     $result->execute(array($email));
                     $datarank = $result->fetch();
 
+                    session_start();
+                    $_SESSION['id'] = $data['id'];
+                    $_SESSION['email'] = $data['email'];
+                    header('Location: landing.php');
+                    die();
+                    
 
-                    if($datarank['rank'] == 'admin')
+                    /* if($datarank['rank'] == 'admin')
                     {
+                        session_start();
                         $_SESSION['admin'] = $datarank;
                         header ('Location: amdin/adminlanding.php');
                         die();
                     }
                     // On créer la session et on redirige sur landing.php
-                    else{
+                    else{ 
+                        session_start();
                         $_SESSION['user'] = $data;
                         header('Location: landing.php');
                         die();
-                    }
+                    }*/
                     // On créer la session et on redirige sur landing.php
                 }else{ header('Location: index.php?login_err=password'); die(); }
             }else{ header('Location: index.php?login_err=email'); die(); }
