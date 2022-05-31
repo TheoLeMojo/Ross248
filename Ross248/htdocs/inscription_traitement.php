@@ -9,6 +9,7 @@
         $email = htmlspecialchars($_POST['email']);
         $password = $_POST['password'];
         $password_retype = $_POST['password_retype'];
+        $clef = htmlspecialchars($_POST['clef']);
         $rank = "user";
 
         
@@ -31,12 +32,14 @@
                         $upper_case = preg_match('@[A-Z]@', $password);
                         $special_chars = preg_match('@[^\w]@', $password);
 
-                        if(strlen($password) < 8 || strlen($password) > 30){
+                        if(strlen($password)>8 || strlen($password)<30){
                             if(!$number || !$lower_case || !$upper_case || !$special_chars){
 
                                 if($password === $password_retype){ // si les deux mdp saisis sont bon
-                                
-                                    // On hash le mot de passe avec Bcrypt, via un coût de 12
+
+                                    if($clef == '1234'){
+
+                                        // On hash le mot de passe avec Bcrypt, via un coût de 12
                                     $cost = ['cost' => 12];
                                     $password = password_hash($password, PASSWORD_BCRYPT, $cost);
                                     
@@ -57,6 +60,7 @@
                                     header('Location:inscription.php?reg_err=success');
                                     die();
 
+                                    }else{header('Location: inscription.php?reg_err=clef'); die();}
                                 }else{header('Location: inscription.php?reg_err=password'); die();}                            
                             } else { header('Location: inscription.php?reg_err=password_character'); die();}                                                        
                         }else{ header('Location: inscription.php?reg_err=password_length'); die();}

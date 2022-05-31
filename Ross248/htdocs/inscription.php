@@ -38,6 +38,14 @@
                           <?php
                           break;
 
+                          case 'clef':
+                            ?>
+                                <div class="alert alert-danger">
+                                    <strong>Erreur</strong> mauvaise clef de connexion !
+                                </div>
+                            <?php
+                            break;
+
                           case 'password_character':
                             ?>
                             <div class="alert alert-danger">
@@ -105,6 +113,10 @@
                   <div class="formulaire">
                       <ion-icon name="lock"></ion-icon>
                       <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" autocomplete="off">
+                  </div>
+                  <div class="formulaire">
+                      <ion-icon name="lock"></ion-icon>
+                      <input type="password" name="clef" class="form-control" placeholder="clef de sécurité" required="required" autocomplete="off">
                   </div>
                   <div class="envoyer">
                       <button type="submit" class="btn btn-primary btn-block">Inscription</button>
