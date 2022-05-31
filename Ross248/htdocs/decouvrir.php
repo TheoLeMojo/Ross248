@@ -1,4 +1,12 @@
 <?php include 'header.php' ?>
+<head>
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/decouvrir.css">
+  <link rel="stylesheet" href="../css/backtotop.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
+</head>
 <body>
 <!-- Nav -->
 <?php include('nav.php')?>
@@ -17,45 +25,41 @@
     </div>
   </div>
 
-  <div id="milieuImg">
-    <img class="imgSlideLeft" src="../img/avion.png">
-    <div class="texteDroite">
-      <p>Parce que les pilotes ont des vies entre les mains, il est primordial de s’assurer de leur fiabilité.
-        Plus de <b>200 passagers</b> (vol long courrier) à transporter sur 15 000 km de distance.</p>
-      <p>Les conducteurs doivent être toujours <b>alertes, concentrés</b>, et savoir faire face à un problème.
-        Les enjeux de nos tests : attester du <b>temps de réaction</b> et de la <b>gestion du stress</b> des futurs pilotes.</p>
-    </div>
-  </div>
-
   <div id="milieu">
-    <div class="icones">
+    
       <div class="milieuGauche animer">
-        <ion-icon name="pulse" class="icone"></ion-icon>
-        <p><b>Rythme cardiaque</b></p>
-        <p>Le rythme cardiaque est un excellent indicateur de stress. Un pilote sachant gérer une situation angoissante saura également réguler ses réactions physiologiques.</p>
+        
+        <p><b>Qui sommes-nous</b></p>
+        <p>Infinite measure est une entreprise moderne créée en 2019 basée en France, et qui a comme principale activité la production de capteur.<br />
+        Durant plusieurs années nous avons constaté que les conditions de travail de certains employés s'avéraient être compliqué, <br />en effet 
+        dans un monde de plus en plus urbanisé, garantir la place de l’humain, c’est garantir la qualité de son environnement.<br />  
+        </p>
       </div>
 
       <div class="milieuCentre animer">
-        <ion-icon name="thermometer" class="icone"></ion-icon>
-        <p><b>Température</b></p>
-        <p>Mesurer la température corporelle du pilote permet de contrôler son état physique et peut prévenir les risques de réactions dangereuses (malaise, crise d’angoisse, etc.).</p>
+        
+        <p><b>Nos produits</b></p>
+        <p>Afin de vous proposer des produits de bonne qualité, nous nous sommes entouré d'ingénieurs dignes de confiance<br /> et 
+        diplômer de grandes écoles.<br /> Ces ingénieurs s'occupent de chaque étape de construction de nos produit et vérifient
+        chacun de nos composants et cela afin d'assurer le meilleur pour nos clients.</p>
       </div>
 
       <div class="milieuDroite animer">
-        <ion-icon name="stopwatch" class="icone"></ion-icon>
-        <p><b>Temps de réaction</b></p>
-        <p>Mesurer le temps que met le pilote à réagir à un stimulus sonore ou visuel permet de s’assurer qu’en cas d’urgence, il saura prendre une décision à temps.</p>
+       
+        <p><b>Nos acheteurs</b></p>
+        <p>Durant ces trois années nous avons pu vendre nos produits à differentes entreprises de transports telles que la RATP, la SNCF ou encore Air France. 
+<br /> Mais nous espérons pouvoir acquérir de nouveaux clients afin de mener à bien notre objectif.</p>
       </div>
-    </div>
+    
   </div>
+
+  <div class=videNav></div>
 
   <div id="bas">
     <div class="texteGauche">
-      <p>Les résultats des tests seront consultables en ligne à tout moment.
-        Seuls le pilote concerné et les gestionnaires y auront accès.
-        Les données personnelles du pilote resteront strictement confidentielles.
-      </p>
-      <p>L'historique des données permettra un meilleur suivi de l'évolution des résultats, avec la possibilité de tracer différents graphiques.
+      <p>Depuis maintenant 6 mois nous travaillons en collaboration avec l'entreprise Ross248 sur un nouveau projet, le capteur R248. 
+Un capteur ayant pour but la mesure de la qualité environnementale d’un poste de travail. 
+Nous avons travaillé d'arrache-pied afin de concevoir ce nouveau capteur bien plus performant que l'ancien et nous espérons pouvoir sortir ce projet dans quelques mois afin de vous le montrer.
 
       </p>
     </div>
@@ -94,6 +98,13 @@
 <!-- Footer -->
 <?php include('footer.php') ?>
 
+  <!--<script src="js/script.js"></script>-->
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="../js/index.js"></script>
+  <script src="../js/base.js"></script>
+</body>
+</html>
   <!--<script src="js/script.js"></script>-->
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

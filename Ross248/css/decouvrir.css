@@ -101,7 +101,7 @@
         font-size: 2vw;
     }
     #milieu {
-        padding: 5% 5% 8% 5%;
+        padding: 5% 5% 20% 5%;
         font-size: 2vw;
     }
     .icones ion-icon {
@@ -158,29 +158,8 @@ body {
 
 #haut {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: row-reverse;
-}
-
-.boutonMesure {
-    height: 150px;
-    flex: 10%;
-    margin-left: 25%;
-    font-size: 200px;
-    color: white;
-}
-
-.boutonMesure:hover {
-    transform: scale(1.25, 1.25);
-    transition: transform 1s ease;
-}
-
-.boutonMesure p {
-    font-size: 30px;
-    align-items: center;
-    justify-items: center;
-    text-decoration: none;
 }
 
 #haut h1 {
@@ -204,8 +183,8 @@ body {
 
 .imgtop {
     height: 100%;
-    margin-left: 5%;
     text-align: center;
+    overflow: hidden;
 }
 
 .imgtop ion-icon {
@@ -266,11 +245,7 @@ body {
 }
 
 #milieu {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 100%;
     height: 100%;
-    flex-shrink: 0;
     background-image: url(../img/deg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -360,15 +335,6 @@ body {
     text-align: center;
 }
 
-
-/* .contact {
-    margin-top: -21px;
-    background-color: #90c0ff;
-    font-size: 2.5vw;
-    font-weight: 300;
-    text-align: center;
-} */
-
 .rs {
     display: flex;
     justify-content: space-between;
@@ -426,99 +392,4 @@ body {
     100% {
         transform: translateY(0);
     }
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
-body .container .choices button {
-    flex: 1 0 45%;
-    width: 200px;
-    height: 80px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-    margin: 0.4rem;
-    outline: none;
-    background: #dfe4ea;
-    user-select: none;
-    font-weight: 600;
-}
-
-body .container .choices {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 3rem auto 3rem;
-    width: 500px;
-}
-
-body .container .choices button:hover {
-    background: #ffa502;
-    transition: 0.5s;
-}
-
-body .container .choices button:active {
-    transform: scale(0.9);
-    transition: transform 0.1s;
-}
-
-body .container .choices button p {
-    font-size: 1.3rem;
-}
-
-body #progress {
-    font-size: 1.3rem;
-    color: #ffa502;
-}
-
-#quiz h1 {
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    justify-items: center;
-    align-items: center;
-    font-size: 3rem;
-}
-
-#quiz h3 {
-    color: blue;
-    font-size: 1.5rem;
-}
-
-#quizz {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    min-height: 100vh;
-    color: #dfe4ea;
-}
-
-
-/* Section FAQ */
-
-*,
- ::before,
- ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-#faq body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-#faq h1 {
-    text-align: center;
-    padding: 35px 0;
-    font-size: 40px;
-}
-
-#faq .container-faq {
-    width: 70%;
-    max-width: 900px;
-    min-width: 700px;
-    height: auto;
-    margin: 10px auto 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }

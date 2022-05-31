@@ -9,14 +9,14 @@
   <a href="connexion.php">Connexion</a>
   <a href="faq.php">FAQ</a>
   <a href="contact.php">Contact</a>
-  <a href="decouvrir.php">L'équipe</a>
+  <a href="decouvrir.php">Decouvrir</a>
   <?php
 
   if (isset($_SESSION['email'] )) {
     echo"<a href='quiz.php'>Quizz</a>";
 
     require_once "config.php";
-    $recupUser = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = ?');
+    $recupUser = $bdd->prepare('SELECT rank FROM utilisateurs WHERE email = ?');
     $recupUser->execute(array($_SESSION['email']));
     $datarank = $recupUser->fetch()['rank'];
     if($datarank = 'user'){

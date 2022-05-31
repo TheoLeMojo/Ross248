@@ -36,6 +36,12 @@
                     $_SESSION['email'] = $data['email'];
                     header('Location: landing.php');
                     die();
+
+                    if($datarank['rank']='admin'){
+                        $_SESSION['admin'] = $data['rank'];
+                        header('Location: admin/adminlanding.php');
+                        die();
+                    }
                     
 
                     /* if($datarank['rank'] == 'admin')

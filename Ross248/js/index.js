@@ -46,4 +46,13 @@ $window.on('scroll', function() {
         }
     });
 
+    $('.boutonMesure').each(function() {
+
+        var basObjet = $(this).offset().top + $(this).outerHeight();
+
+        if (basFenetre > basObjet) {
+            $(this).animate({ 'right': '8%' }, 700);
+        }
+    });
+
 });

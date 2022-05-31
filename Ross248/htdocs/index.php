@@ -1,4 +1,13 @@
 <?php include 'header.php' ?>
+<head>
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/index2.css">
+  <link rel="stylesheet" href="../css/backtotop.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="../css/connexion.css"> 
+</head>
 <body>
 
 <!-- Nav -->
@@ -6,6 +15,16 @@
 
     <div id="haut">
       <div class=videNav></div>
+      <div class="boutonMesure">
+        <i class='fas fa-chart-pie'></i>
+        <p>
+          <?php 
+            if(isset($_SESSION['email'])){ 
+              echo"<a href='landing.php'>";
+            }else{
+              echo"<a href='connexion.php'>";
+            }?>Mes mesures</p>
+      </div>
       <div class="imgtop">
         <!--<img src="https://i.imgur.com/wxYQfml.jpg"></img>-->
         <div class="imgTexte">
@@ -18,6 +37,7 @@
           </div>
         </div>
       </div>
+      
     </div>
 
     

@@ -1,13 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-control" content="private" />
-  <title>Ross248</title>
-  <meta name="description" content="Notre solution a pour but de garantir la fiabilité des pilotes, au travers de divers tests psychotechniques.">
-  <meta name="robots" content="index, follow" />
-  <link rel="icon" type="image/png" href="../img/logo.png">
+  <?php include('header.php');?>
   <link rel="stylesheet" href="../css/nav.css">
   <link rel="stylesheet" href="../css/index2.css">
   <link rel="stylesheet" href="../css/backtotop.css">
@@ -37,12 +31,7 @@
 
   <div id="milieuImg">
     <img class="imgSlideLeft" src="../img/avion.png">
-    <div class="texteDroite">
-      <p>Parce que les pilotes ont des vies entre les mains, il est primordial de s’assurer de leur fiabilité.
-        Plus de <b>200 passagers</b> (vol long courrier) à transporter sur 15 000 km de distance.</p>
-      <p>Les conducteurs doivent être toujours <b>alertes, concentrés</b>, et savoir faire face à un problème.
-        Les enjeux de nos tests : attester du <b>temps de réaction</b> et de la <b>gestion du stress</b> des futurs pilotes.</p>
-    </div>
+    
   </div>
   <div class="container">
     <div id="quiz">
